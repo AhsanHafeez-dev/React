@@ -1,23 +1,23 @@
-const root = document.getElementById('root');
 const reactElement = {
-    type: 'a',
-    props: {
-        href: 'https://google.com',
-        target:'_blank'
-    },
-    children: 'click me to visit google'
-    
+  type: "div",
+  props: {
+    href: "https:google.com",
+    target: "_blank",
+  },
+  children: "click me",
+};
+const root = document.getElementById("root");
+
+
+const render = (item, root) => {
+    const element = document.createElement(item.type);
+ console.log(item)   
+    for (let i in item.props) {
+        element.setAttribute(i, item.props[i]);
+    }
+    element.innerHTML = item.children;
+    root.appendChild(element);
+   
 }
 
-
-customRender(reactElement, root);
-
-function customRender(reactElement, root) {
-    
-    const domElement = document.createElement(reactElement.type);
-    domElement.innerHTML = reactElement.children;
-    Object.keys(reactElement.props).forEach((elem) => { domElement.setAttribute(elem, reactElement.props[elem]) });
-    root.appendChild(domElement);    
-    
-
-}
+render(reactElement,root)

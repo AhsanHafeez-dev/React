@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './App.css'
 
 function App() {
-  let [ counter, setCounter ] = useState(15);
+  let [counter, setCounter] = useState(15);
+  console.log(useState(5)[1] )
   // let counter = 15;
   const addValue = () => { if (counter<20)setCounter(counter+1); console.log("value added ", Math.random(),counter); }
   const subtractValue = () => { if(counter>0)setCounter(counter-1); console.log("value subtracted ", Math.random());}

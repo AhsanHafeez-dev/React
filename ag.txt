@@ -1,4 +1,0 @@
-started react js series firstly he describes the roadmap for learning react and its motvation then he move to basics he created react app with two command npx create-react-app and npm create vite@latest create-react-app is bulky takes alot of time and give many extra dependencies e.g tetsing webvitals linting etc .  we deleted all css and js file from create-react-app leaving only index.js and app.js and alos deleetc whole big div from app.js and wrote one h1 tag in it then we run npm run start to check if its stillworking ,then we move towards vite folder and deleted everything except main and app.jsx then we remove div and imports and retur h1 with random text                                            
-
-
-
