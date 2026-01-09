@@ -1,4 +1,6 @@
+import {Link,NavLink} from "react-router-dom"
 export default function Home() {
+    
     return (
         <div className="mx-auto w-full max-w-7xl">
             <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
