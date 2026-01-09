@@ -1,4 +1,4 @@
-import useTheme from "../contexts/theme";
+import useTheme from "../contexts/ThemeContext";
 
 export default function ThemeBtn() {
     const { themeMode, darkTheme, lightTheme } = useTheme();
@@ -9,12 +9,16 @@ export default function ThemeBtn() {
                 type="checkbox"
                 value=""
                 className="sr-only peer"
+                // checked={themeMode != "dark"}
                 checked={themeMode==="dark"}
                 onChange={
-                    () => {
-                        console.log(themeMode);
-                        if (themeMode == "light") { darkTheme(); }
-                        else lightTheme();
+                    (e) => {
+                        const darkThemeOn = e.currentTarget.checked;  
+                        if (darkThemeOn) darkTheme();
+                        else lightTheme()
+
+                        // if (darkThemeOn) lightTheme();
+                        // else darkTheme()
                     }
                 }
             />
