@@ -1,0 +1,19 @@
+Authentication :  It is the process of ensuring user is who they claim to be, user generally identifies themselves using email and password authetication can be one of following
+types Knowledge based it is what you know pin,password or security question posession it is what you have like card,key or otp recieved using mobile app.Inherence is what you are
+it generally fingerprint,facial recognition etc . bases on sensitivty there are multiple types of authentication single factor authentocation only includes one step verification 
+usally using password and email and is generally considered leats secured method.multi factor authentication add another critical layer of security which means you need to verify 
+otps and links.Single Sign On is that you access to multiple apps without re entering credentials sigin with google is great example of sso. password less authentication 
+replaces typical password based authentication with more convernient methods like finger print physical key faicial recognition
+Access Control : It is the descriptive way of defining control over particular resource so  only desired persions can access it it can broadly be divied into two categories physical 
+acess control in which you restrict access to physical location like server room without authorization and digital access control whihc restrict access to digital resources like
+network systems and data there are different models of access control rbac or role based acess control it give access or permission to role or group rather than individual persons
+it is most simplest and been broadly used  discretionary DAC in this the creator of the resource decides who can access the resouce it geenrally used in plattform like google docs , 
+colab or other multi user environmemt like linux users mandotary access cntrol in this access is generally defined by centralized authority using clearence level and no user can 
+over write that abac attribute based access control decided whom have access to what based on flexible attributes and environments it is more dynamic as compared to previous
+static approaches
+software security minimize attack surface,prevent data theft,availability,data integrity , protect business reputation , threat modeling  secure coding secure testing vulnaribilty
+management secure design pattern
+malware it is a software intentionally designed to to harm computer system network or data it accesses the sensitive info like password credentials witjhout user's consent 
+virus worm torjan horse adware ransomware spyware 
+firewall : packet filtering , web app , next-gen  ai powered 
+ids : network host hybrid signature application protocol
