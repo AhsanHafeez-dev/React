@@ -1,0 +1,54 @@
+import { useEffect, useState } from "react";
+import appWriteService from "../appwrite/config"
+import { Container, PostCard } from '../components/index';
+import { useSelector } from "react-redux";
+
+export default function Home() {
+    const [posts, setPosts] = useState([]);
+    const authStatus = useSelector(state => state?.status) || false;
+    console.log(authStatus);
+    
+    useEffect(() => {
+
+        appWriteService.getPosts([]).then(posts =>
+        {
+            console.log("useEffect",posts);
+            if (posts) setPosts(posts.rows)
+            
+            
+        });
+        console.log(posts);
+        
+    }, [])
+    
+    if (!authStatus) {
+        return (
+            <div className="w-full py-8 mt-4 text-center">
+                <Container>
+                    <div className="flex flex-wrap">
+                        <div className="p-2 w-full">
+                            <h1 className="text-2xl font-bold hover:text-gray-500">
+                                Login to read posts
+                            </h1>
+                        </div>
+                    </div>
+                </Container>
+            </div>
+        )
+    }
+
+    return (
+        <div className='w-full py-8'>
+            <Container>
+                <div className='flex flex-wrap'>
+                    {posts.map((post) => (
+                        <div key={post.$id} className='p-2 w-1/4'>
+                            <PostCard {...post} />
+                        </div>
+                    ))}
+                </div>
+            </Container>
+        </div>
+    )
+    
+    }
